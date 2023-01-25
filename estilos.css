@@ -1,0 +1,36 @@
+
+
+
+#fotografia {
+    padding-left: 33%;
+    width: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+h1{
+    color: black;
+    background-color: lightgoldenrodyellow;
+    padding-left: 33%;
+    width: 50%;
+}
+
+#datospersonales, #talentos {
+
+ background-color: lightgoldenrodyellow;
+ color: darkslategrey;
+ padding-left: 33%;
+ width: 50%;
+ 
+ /*Agrego sombras para darle forma de cartas*/
+ box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+
+/*Al posicionar el cursor encima, pone una sombra mas profunda*/
+#datospersonales:hover, #talentos:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    transition: 0.3ms;
+    perspective: 45px;
+    /*pendiente de ver como queda mejor con esta rotación de 45 grados*/
+    transform: rotateY(45deg);
+}
