@@ -1,43 +1,83 @@
-/*Fuentes utilizadas:
+/*CSS escrito por Lahuel RS - 2023*/
+
+#contenedorPadre {
+    display: grid;
+  }
+  #contenedorHijo {
+    align-self: center;
+    justify-self: center;
+  }
+  
 
 
-*/
+body{
+    /*Aplico fondo de color*/
+        background-image:linear-gradient(#aaf1aa15);
+    /*Aplico tipografia*/
+        font-family: 'Noto Serif Georgian', serif;
+        display: grid;
+    /* Genero un fondo con gradiente */ 
+    /* Generado con https://cssgradient.io/  */
+    background: rgb(10,10,111);
+    background: linear-gradient(230deg, rgba(10,10,111,1) 0%, rgba(100,149,180,0.871568610354298) 87%, rgba(2,0,36,1) 100%); 
+}
+.fotografia_circular{
+    align-self: center;
+    justify-self: center;
+    /*Da un recorte de la imagen y aplica un leve blur/desenfoque*/
+    /*Defino sus dimensiones.*/
+        height: 100px;
+        width: 100px;
+    /*La centro*/
+        align-items: center;
+        justify-content: center;
+    /*Aplico blur/desenfoque a la imagen*/
+        filter: blur(1px);
+    /*Redondeo los bordes*/
+        border-radius: 50px;
 
-
-#fotografia {
-    filter: blur(8px);
-    /*-webkit-filter: blur(8px);*/
-    padding-left: 33%;
-    height: auto;
-    max-width: 100px;    
-    opacity:0.9;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);        
 }
 
-h1{
-    color: black;
-    background-color: lightgoldenrodyellow;
-    padding-left: 33%;
-    width: 50%;
+.boton {
+    /*Botón de 50px cuadrados, fondo verde y letras claras.*/
+    align-self: center;
+    justify-self: center;
+    /*Defino sus dimensiones.*/
+        height: 20px;
+        width: 20px;
+    /*Le doy un borde con un radio de 3px.*/
+        border-radius: 2px;
+        margin-right: 10px;
+    /*Defino los colores.*/
+        color:#fff;S
+        background-color: #0505ee;   
 }
 
-#datospersonales, #talentos {
+.carta_sombreada{
+    /*Da un efecto de sombra y profundidad, animado al entrar al sitio*/
+        align-self: center;
+        justify-self: center;
+    /*Agrego sombras para darle forma de cartas*/
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 
- background-color: lightgoldenrodyellow;
- color: darkslategrey;
- padding-left: 33%;
- width: 50%;
-  /*Agrego sombras para darle forma de cartas*/
- box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 
-
-/*Al posicionar el cursor encima, pone una sombra mas profunda*/
-#datospersonales:hover, #talentos:hover{
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-    transition: 0.3ms;
+.carta_sombreada:focus{
+    /*Muevo la sombra de la carta cuando este en foco*/
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        transition: 0.3ms;
     /*Le doy perspectiva a la carta*/
-    perspective: 45px;
-    /*pendiente de ver como queda mejor con esta rotación de 45 grados*/
-    transform: rotateY(45deg);
+        perspective: 15px;
+
+}
+
+.barra_progreso{
+    /*Crea una zona oscura*/
+    background-color: black;
+    /*La posiciono*/
+    position:absolute;
+    top:0;
+    left:0;
+    /*height: 100%;*/
+    border-radius: 4px;
 }
