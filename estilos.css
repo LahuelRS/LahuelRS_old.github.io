@@ -17,7 +17,7 @@ body{
         font-family: 'Noto Serif Georgian', serif;
         display: grid;
     /* Genero un fondo con gradiente */ 
-    /* Generado con https://cssgradient.io/  */
+    /* Gradiente generado con https://cssgradient.io/  */
     background: rgb(10,10,111);
     background: linear-gradient(230deg, rgba(10,10,111,1) 0%, rgba(100,149,180,0.871568610354298) 87%, rgba(2,0,36,1) 100%); 
 }
@@ -39,7 +39,7 @@ body{
 }
 
 .boton {
-    /*Botón de 50px cuadrados, fondo verde y letras claras.*/
+    /*Botón de 20px cuadrados.*/
     align-self: center;
     justify-self: center;
     /*Defino sus dimensiones.*/
@@ -59,7 +59,6 @@ body{
         justify-self: center;
     /*Agrego sombras para darle forma de cartas*/
         box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-
 }
 
 .carta_sombreada:focus{
@@ -72,12 +71,15 @@ body{
 }
 
 .barra_progreso{
-    /*Crea una zona oscura*/
-    background-color: black;
+	
+    /*Crea una zona gris*/
+    background-color: grey;
+	/*Le añado borde "sombreado" inferior*/*/
+	box-shadow: inset 0 -1px 1px rgba(0, 100, 255, 0.3);
+	/*Redondeo los bordes*/
+	border-radius: 4px;	
     /*La posiciono*/
-    position:absolute;
-    top:0;
-    left:0;
-    /*height: 100%;*/
-    border-radius: 4px;
+    position:relative;    
+	padding:5px;
+        
 }
