@@ -15,7 +15,11 @@ body{
         background-image:linear-gradient(#aaf1aa15);
     /*Aplico tipografia*/
         font-family: 'Noto Serif Georgian', serif;
+    /*Empleo grid para ordenar luego objetos */
         display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 10px;
+        grid-auto-rows: minmax(100px, auto);
     /* Genero un fondo con gradiente */ 
     /* Gradiente generado con https://cssgradient.io/  */
         background: rgb(10,10,111);
@@ -50,8 +54,8 @@ body{
         border-radius: 2px;
         margin-right: 10px;
     /*Defino los colores.*/
-        color:#fff;S
-        background-color: #0505ee;   
+        color:#fff;
+        background-color: #505eee;   
 }
 
 .carta_sombreada{
