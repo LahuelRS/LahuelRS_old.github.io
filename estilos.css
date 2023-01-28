@@ -7,9 +7,8 @@ body{
         font-family: 'Noto Serif Georgian', serif;
     /*Empleo grid para ordenar luego objetos */
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-gap: 10px;
-        grid-auto-rows: minmax(100px, auto);
+		grid-auto-columns: minmax(auto); 
+		grid-gap: 10px;	/*Espacio entre elementos*/
     /* Genero un fondo con gradiente */ 
     /* Gradiente generado con https://cssgradient.io/  */
         background: rgb(10,10,111);
@@ -23,35 +22,35 @@ body{
         height: 100px;
         width: 100px;
     /*La centro*/
-        align-items: center;
-        justify-content: center;
+		align-items: center;
+        justify-content: center; 
     /*Aplico blur/desenfoque a la imagen*/
         filter: blur(1px);
     /*Redondeo los bordes*/
         border-radius: 50px;
-
+    /*Agrego sombras para darle forma de carta*/
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 
 .fotografia_circular:hover{
-    /*Aplica sombra sobre la fotografia cuando el mouse/cursor esta encima*/
+	/*Aplica sombra sobre la fotografia cuando el mouse/cursor esta encima*/
         box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-    /*Defino que la transicion dure medio segundo*/
-	transition: 500ms;
-    /*Transformo la foto, rotandola una vuelta*/
-	transform: rotate(1turn);
+    /*Le doy un instante de transicion*/
+		transition: 500ms;
+	/*Transformo la foto, rotandola una vuelta*/
+		transform: rotate(1turn);
 }
-
 
 .boton {
     /*Botón de 20px cuadrados.*/
         align-self: center;
         justify-self: center;
     /*Defino sus dimensiones.*/
-        height: 20px;
-        width: 20px;
+        height: 50px;
+        width: 50px;
     /*Le doy un borde con un radio de 3px.*/
         border-radius: 2px;
-        margin-right: 10px;
+        /*margin-right: 10px;*/
     /*Defino los colores.*/
         color:#fff;
         background-color: #505eee;   
@@ -59,30 +58,45 @@ body{
 
 .carta_sombreada{
     /*Da un efecto de sombra y profundidad*/
+	/*Posiciono*/
         align-self: center;
         justify-self: center;
         display: block;
+		position:relative;
     /*Agrego sombras para darle forma de cartas*/
         box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 
 .carta_sombreada:hover{
-    /*Muevo la sombra de la carta cuando el mouse/cursor este encima*/
+    /*Muevo la sombra de la carta cuando este en foco*/
         box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-        transition: 0.3ms;
-    /*Le doy perspectiva a la carta*/
-        perspective: 15px;
-
+        transition: 500ms;
 }
 
 .barra_progreso{
-    /*Creo una zona gris*/
+    /*Crea una zona gris*/
         background-color: grey;
-    /*Le añado borde "sombreado" inferior*/
-	box-shadow: inset 0 -1px 1px rgba(0, 100, 255, 0.3);
-    /*Redondeo los bordes*/
-	border-radius: 4px;	
+	/*Le añado borde "sombreado" inferior*/
+	    box-shadow: inset 0 -1px 1px rgba(0, 100, 255, 0.3);
+	/*Redondeo los bordes*/
+	    border-radius: 4px;	
     /*La posiciono*/
         position:relative;    
-	padding:5px;       
+	    padding:1px;       
+}
+
+
+#tarjeta_principal{
+	grid-column:1/3;
+	grid-row:1;
+}
+
+#lista_idiomas{
+	grid-column: 2;
+	grid-row:1;
+}
+
+#lista_conocimientos{
+	grid-column:1;
+	grid-row:1;
 }
