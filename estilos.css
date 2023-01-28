@@ -1,15 +1,5 @@
 /*CSS escrito por Lahuel RS - 2023*/
 
-#contenedorPadre {
-        display: grid;
-  }
-  #contenedorHijo {
-        align-self: center;
-        justify-self: center;
-  }
-  
-
-
 body{
     /*Aplico fondo de color*/
         background-image:linear-gradient(#aaf1aa15);
@@ -29,7 +19,6 @@ body{
     /*Da un recorte de la imagen y aplica un leve blur/desenfoque*/
         align-self: center;
         justify-self: center;
-    
     /*Defino sus dimensiones.*/
         height: 100px;
         width: 100px;
@@ -68,7 +57,7 @@ body{
 }
 
 .carta_sombreada:hover{
-    /*Muevo la sombra de la carta cuando este en foco*/
+    /*Muevo la sombra de la carta cuando el mouse/cursor este encima*/
         box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
         transition: 0.3ms;
     /*Le doy perspectiva a la carta*/
@@ -77,15 +66,13 @@ body{
 }
 
 .barra_progreso{
-	
-    /*Crea una zona gris*/
+    /*Creo una zona gris*/
         background-color: grey;
-	/*Le añado borde "sombreado" inferior*/
-	    box-shadow: inset 0 -1px 1px rgba(0, 100, 255, 0.3);
-	/*Redondeo los bordes*/
-	    border-radius: 4px;	
+    /*Le añado borde "sombreado" inferior*/
+	box-shadow: inset 0 -1px 1px rgba(0, 100, 255, 0.3);
+    /*Redondeo los bordes*/
+	border-radius: 4px;	
     /*La posiciono*/
         position:relative;    
-	    padding:5px;
-        
+	padding:5px;       
 }
