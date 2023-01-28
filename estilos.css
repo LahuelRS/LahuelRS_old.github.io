@@ -32,6 +32,16 @@ body{
 
 }
 
+.fotografia_circular:hover{
+    /*Aplica sombra sobre la fotografia cuando el mouse/cursor esta encima*/
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    /*Defino que la transicion dure medio segundo*/
+	transition: 500ms;
+    /*Transformo la foto, rotandola una vuelta*/
+	transform: rotate(1turn);
+}
+
+
 .boton {
     /*Botón de 20px cuadrados.*/
         align-self: center;
