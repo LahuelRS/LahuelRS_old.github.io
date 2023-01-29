@@ -1,35 +1,81 @@
-/*CSS escrito por Lahuel RS - 2023*/
+/* CSS escrito por Lahuel RS - 2023*/
 
-body{
-    /*Aplico fondo de color*/
-        background-image:linear-gradient(#aaf1aa15);
-    /*Aplico tipografia*/
-        font-family: 'Noto Serif Georgian', serif;
-    /*Empleo grid para ordenar luego objetos */
-        display: grid;
-		grid-auto-columns: minmax(auto); 
-		grid-gap: 10px;	/*Espacio entre elementos*/
-    /* Genero un fondo con gradiente */ 
-    /* Gradiente generado con https://cssgradient.io/  */
+/* Importo tipografias de Google Fonts: */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Georgian:wght@700&display=swap');
+
+* {
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+}
+
+body {
+	/* Genero un fondo con gradiente -fuente: https://cssgradient.io/  -*/
         background: rgb(10,10,111);
         background: linear-gradient(230deg, rgba(10,10,111,1) 0%, rgba(100,149,180,0.871568610354298) 87%, rgba(2,0,36,1) 100%); 
-}
-.fotografia_circular{
-    /*Da un recorte de la imagen y aplica un leve blur/desenfoque*/
-        align-self: center;
-        justify-self: center;
-    /*Defino sus dimensiones.*/
-        height: 100px;
-        width: 100px;
-    /*La centro*/
+	/* Utilizo flexbox */
+		display:flex;
+		justify-content: center;
 		align-items: center;
-        justify-content: center; 
-    /*Aplico blur/desenfoque a la imagen*/
-        filter: blur(1px);
-    /*Redondeo los bordes*/
-        border-radius: 50px;
-    /*Agrego sombras para darle forma de carta*/
-        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+		min-height:100vh;
+	/* Tipografia */ 	
+		font-family: 'Noto Serif Georgian', serif;
+		
+}
+
+
+.contenedor{
+		position:relative;
+		width:100%;
+		max-width: 1000px;
+		max-height:1000px;
+		margin: 50px;
+		background: #fff;
+		/* Empleo una grilla*/
+		display:grid;
+		grid-template-columns: 1fr 1fr;
+		box-shadow: 0 35px 55px rgba(0,0,0,0.1);
+}
+
+.contenedor .tarjeta_principal{
+		position:relative;
+		background: #003147;
+		padding: 40px;
+		
+}
+.contenedor .tarjeta_contacto{
+	position:relative;
+	background: #003147;
+	padding: 40px;
+}
+
+.tarjeta_principal, .tarjeta_contacto{
+		position:relative;
+		display:flex;
+		flex-direction:column;
+		align-items:center;
+		padding-bottom: 20px;
+		border-bottom:1px solid rgba(255,255,255,0.2);
+	
+}
+
+.tarjeta_principal .fotografia_circular{
+	padding: 1px;
+	position:relative;
+	width:200px;
+	height:200px;
+	border-radius:50%;
+	overflow:hidden;
+}
+
+.tarjeta_principal .fotografia_circular img{
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	object-fit:cover;
+
 }
 
 .fotografia_circular:hover{
@@ -41,36 +87,35 @@ body{
 		transform: rotate(1turn);
 }
 
-.boton {
-    /*Botón de 20px cuadrados.*/
-        align-self: center;
-        justify-self: center;
-    /*Defino sus dimensiones.*/
-        height: 50px;
-        width: 50px;
-    /*Le doy un borde con un radio de 3px.*/
-        border-radius: 2px;
-        /*margin-right: 10px;*/
-    /*Defino los colores.*/
-        color:#fff;
-        background-color: #505eee;   
+
+
+.tarjeta_principal h2{
+	color:#fff;
+	font-size:1.5em;
+	margin-top:20px;
+	text-transform:uppercase;
+	text-align: center;
+	font-weight: 600;
+	line-height:1.4em;
 }
 
-.carta_sombreada{
-    /*Da un efecto de sombra y profundidad*/
-	/*Posiciono*/
-        align-self: center;
-        justify-self: center;
-        display: block;
+.tarjeta_principal h2 span{
+	font-size:0.8em;
+	font-weight:300;
+	
+}
+
+
+.contenedor .tarjeta_idiomas{
 		position:relative;
-    /*Agrego sombras para darle forma de cartas*/
-        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+		background: #003147;
+		padding: 40px;
 }
 
-.carta_sombreada:hover{
-    /*Muevo la sombra de la carta cuando este en foco*/
-        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-        transition: 500ms;
+.contenedor .tarjeta_conocimientos{
+		position:relative;
+		background: #003147;
+		padding: 40px;
 }
 
 .barra_progreso{
@@ -82,21 +127,7 @@ body{
 	    border-radius: 4px;	
     /*La posiciono*/
         position:relative;    
-	    padding:1px;       
-}
-
-
-#tarjeta_principal{
-	grid-column:1/3;
-	grid-row:1;
-}
-
-#lista_idiomas{
-	grid-column: 2;
-	grid-row:1;
-}
-
-#lista_conocimientos{
-	grid-column:1;
-	grid-row:1;
+	    padding:1px; 
+	/*Alineo contenido al centro del objeto*/
+		align-self: center;
 }
