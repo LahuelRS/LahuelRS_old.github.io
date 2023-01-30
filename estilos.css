@@ -13,6 +13,7 @@ body {
 	/* Genero un fondo con gradiente -fuente: https://cssgradient.io/  -*/
         background: rgb(10,10,111);
         background: linear-gradient(230deg, rgba(10,10,111,1) 0%, rgba(100,149,180,0.871568610354298) 87%, rgba(2,0,36,1) 100%); 
+		background-repeat: no-repeat;
 	/* Utilizo flexbox */
 		display:flex;
 		justify-content: center;
@@ -27,26 +28,22 @@ body {
 .contenedor{
 		position:relative;
 		width:100%;
-		max-width: 1000px;
-		max-height:1000px;
+		max-width: 1400px;
+		min-height: 500px;
+		max-height:1280px;
 		margin: 50px;
-		background: #fff;
+		background: #003147;
 		/* Empleo una grilla*/
 		display:grid;
-		grid-template-columns: 1fr 1fr;
+		grid-template-columns: 1fr 2fr;
 		box-shadow: 0 35px 55px rgba(0,0,0,0.1);
 }
 
-.contenedor .tarjeta_principal{
+.contenedor .tarjeta_principal, .tarjeta_contacto, .tarjeta_idiomas, .tarjeta_conocimientos{
 		position:relative;
 		background: #003147;
 		padding: 40px;
 		
-}
-.contenedor .tarjeta_contacto{
-	position:relative;
-	background: #003147;
-	padding: 40px;
 }
 
 .tarjeta_principal, .tarjeta_contacto{
@@ -56,6 +53,9 @@ body {
 		align-items:center;
 		padding-bottom: 20px;
 		border-bottom:1px solid rgba(255,255,255,0.2);
+		h2 {
+			align-
+		}
 	
 }
 
@@ -81,7 +81,7 @@ body {
 .fotografia_circular:hover{
 	/*Aplica sombra sobre la fotografia cuando el mouse/cursor esta encima*/
         box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-    /*Le doy un instante de transicion*/
+    /*Le doy medio segundo de transicion*/
 		transition: 500ms;
 	/*Transformo la foto, rotandola una vuelta*/
 		transform: rotate(1turn);
@@ -106,17 +106,7 @@ body {
 }
 
 
-.contenedor .tarjeta_idiomas{
-		position:relative;
-		background: #003147;
-		padding: 40px;
-}
 
-.contenedor .tarjeta_conocimientos{
-		position:relative;
-		background: #003147;
-		padding: 40px;
-}
 
 .barra_progreso{
     /*Crea una zona gris*/
@@ -130,4 +120,14 @@ body {
 	    padding:1px; 
 	/*Alineo contenido al centro del objeto*/
 		align-self: center;
+}
+/*minimo 600px*/
+@media (max-width: 1000px)
+{
+	.contenedor
+	{
+		margin:100px;
+		grid-template-columns: repeat(1fr 2fr);
+	}
+
 }
