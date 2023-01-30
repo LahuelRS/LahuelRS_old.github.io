@@ -28,6 +28,7 @@ body {
 .contenedor{
 		position:relative;
 		width:100%;
+		min-width: 550px;
 		max-width: 1400px;
 		min-height: 500px;
 		max-height:1280px;
