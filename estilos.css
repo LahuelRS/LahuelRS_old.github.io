@@ -53,11 +53,7 @@ body {
 		flex-direction:column;
 		align-items:center;
 		padding-bottom: 20px;
-		border-bottom:1px solid rgba(255,255,255,0.2);
-		h2 {
-			align-
-		}
-	
+		border-bottom:1px solid rgba(255,255,255,0.2);	
 }
 
 .tarjeta_principal .fotografia_circular{
@@ -106,6 +102,10 @@ body {
 	
 }
 
+.tarjeta_idiomas, .tarjeta_conocimientos, .tarjeta_contacto{
+	color:#fff;
+	
+}
 
 
 
