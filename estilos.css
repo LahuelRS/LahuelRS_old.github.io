@@ -34,7 +34,7 @@ body {
 		background: #003147;
 		/* Empleo una grilla*/
 		display:grid;
-		grid-template-columns: 1fr 2fr;
+		grid-template-columns: (1fr, 1fr);
 		box-shadow: 0 35px 55px rgba(0,0,0,0.1);
 }
 
@@ -120,15 +120,16 @@ body {
 		align-self: center;
 }
 /*minimo 600px*/
-@media (max-width: 600px)
+@media (max-width: 1000px)
 {
 	.contenedor
 	{
 		margin:100px;
-		grid-template-columns: repeat 1fr;
+		grid-template-columns: repeat (1, 1fr);
 	}
 	.tarjeta_conocimientos,.tarjeta_idiomas{
-		display: none;
+		/*transform: translatey(600px);*/
+		/*transform: translatex(-300px);*/
 	}
 
 }
