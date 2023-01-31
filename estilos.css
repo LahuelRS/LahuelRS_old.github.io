@@ -18,7 +18,7 @@ body {
 		display:flex;
 		justify-content: center;
 		align-items: center;
-		min-height:100vh;
+			
 	/* Tipografia */ 	
 		font-family: 'Noto Serif Georgian', serif;
 		
@@ -28,9 +28,7 @@ body {
 .contenedor{
 		position:relative;
 		width:100%;
-		min-width: 550px;
 		max-width: 1400px;
-		min-height: 500px;
 		max-height:1280px;
 		margin: 50px;
 		background: #003147;
@@ -53,7 +51,7 @@ body {
 		flex-direction:column;
 		align-items:center;
 		padding-bottom: 20px;
-		border-bottom:1px solid rgba(255,255,255,0.2);	
+		border-bottom:1px solid rgba(255,255,255,0.2);
 }
 
 .tarjeta_principal .fotografia_circular{
@@ -84,7 +82,10 @@ body {
 		transform: rotate(1turn);
 }
 
-
+.icono{
+		width: 40px;
+		color: beige;
+}
 
 .tarjeta_principal h2{
 	color:#fff;
@@ -102,10 +103,6 @@ body {
 	
 }
 
-.tarjeta_idiomas, .tarjeta_conocimientos, .tarjeta_contacto{
-	color:#fff;
-	
-}
 
 
 
@@ -123,12 +120,15 @@ body {
 		align-self: center;
 }
 /*minimo 600px*/
-@media (max-width: 1000px)
+@media (max-width: 600px)
 {
 	.contenedor
 	{
 		margin:100px;
-		grid-template-columns: repeat(1fr 2fr);
+		grid-template-columns: repeat 1fr;
+	}
+	.tarjeta_conocimientos,.tarjeta_idiomas{
+		display: none;
 	}
 
 }
