@@ -38,10 +38,11 @@ body {
 		box-shadow: 0 35px 55px rgba(0,0,0,0.1);
 }
 
-.contenedor .tarjeta_principal, .tarjeta_contacto, .tarjeta_idiomas, .tarjeta_conocimientos{
+.contenedor .tarjeta_principal, .tarjeta_contacto, .tarjeta_idiomas, .tarjeta_conocimientos, .tarjeta_experiencias{
 		position:relative;
 		background: #003147;
 		padding: 40px;
+		border-bottom:1px solid rgba(255,255,255,0.2);
 		
 }
 
@@ -51,7 +52,7 @@ body {
 		flex-direction:column;
 		align-items:center;
 		padding-bottom: 20px;
-		border-bottom:1px solid rgba(255,255,255,0.2);
+
 }
 
 .tarjeta_principal .fotografia_circular{
@@ -105,7 +106,6 @@ body {
 
 
 
-
 .barra_progreso{
     /*Crea una zona gris*/
         background-color: grey;
@@ -119,16 +119,15 @@ body {
 	/*Alineo contenido al centro del objeto*/
 		align-self: center;
 }
-/*minimo 600px*/
+
+/*Para pantallas con ancho igual o menor a 600 pixeles*/
 @media (max-width: 600px)
 {
 	.contenedor
 	{
 		margin:100px;
-		grid-template-columns: repeat 1fr;
+		grid-template-columns: 1fr;
 	}
-	.tarjeta_conocimientos,.tarjeta_idiomas{
-		display: none;
-	}
+
 
 }
