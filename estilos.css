@@ -29,9 +29,9 @@ body {
 		position:relative;
 		width:100%;
 		max-width: 1400px;
-		/* max-height:1280px; */
+		max-height:1280px;
 		margin: 50px;
-		background: #4c7cec;
+		background: rgb(135, 154, 216);
 		/* Empleo una grilla*/
 		display:grid;
 		grid-template-columns: 1fr 2fr;
@@ -40,7 +40,7 @@ body {
 
 .contenedor .tarjeta_principal, .tarjeta_contacto, .tarjeta_idiomas, .tarjeta_conocimientos, .tarjeta_experiencias{
 		position:relative;
-		background: #003147;
+		background: rgb(135, 154, 216);
 		padding: 40px;
 		border-bottom:1px solid rgba(255,255,255,0.2);
 		
@@ -77,7 +77,7 @@ body {
 .fotografia_circular:hover{
 	/*Aplica sombra sobre la fotografia cuando el mouse/cursor esta encima*/
         box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-	/*Le doy medio segundo de transicion*/
+    /*Le doy medio segundo de transicion*/
 		transition: 500ms;
 	/*Transformo la foto, rotandola una vuelta*/
 		transform: rotate(1turn);
@@ -104,9 +104,6 @@ body {
 	
 }
 
-.lado_derecho .texto{
-	color:#D4D9E3;
-}
 
 
 .barra_progreso{
