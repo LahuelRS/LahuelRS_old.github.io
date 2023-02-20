@@ -12,46 +12,46 @@
 body {
 	/* Genero un fondo con gradiente -fuente: https://cssgradient.io/  -*/
         background: rgb(10,10,111);
-        background: linear-gradient(230deg, rgba(10,10,111,1) 0%, rgba(100,149,180,0.871568610354298) 87%, rgba(2,0,36,1) 100%); 
-		background-repeat: no-repeat;
+        background: linear-gradient(90deg, rgba(10,10,111,1) 0%, rgba(100,149,180,0.871568610354298) 87%, rgba(2,0,36,1) 100%); 
+	background-repeat: repeat;
 	/* Utilizo flexbox */
-		display:flex;
-		justify-content: center;
-		align-items: center;
+	display:flex;
+	justify-content: center;
+	align-items: center;
 			
 	/* Tipografia */ 	
-		font-family: 'Noto Serif Georgian', serif;
+	font-family: 'Noto Serif Georgian', serif;
 		
 }
 
 
 .contenedor{
-		position:relative;
-		width:100%;
-		max-width: 1400px;
-		max-height:1280px;
-		margin: 50px;
-		background: rgb(135, 154, 216);
-		/* Empleo una grilla*/
-		display:grid;
-		grid-template-columns: 1fr 2fr;
-		box-shadow: 0 35px 55px rgba(0,0,0,0.1);
+	position:relative;
+	width:100%;
+	max-width: 1400px;
+	max-height:1280px;
+	margin: 50px;
+	background: rgb(135, 154, 216);
+	/* Empleo una grilla*/
+	display:grid;
+	grid-template-columns: 1fr 2fr;
+	box-shadow: 0 35px 55px rgba(0,0,0,0.1);
 }
 
 .contenedor .tarjeta_principal, .tarjeta_contacto, .tarjeta_idiomas, .tarjeta_conocimientos, .tarjeta_experiencias{
-		position:relative;
-		background: rgb(135, 154, 216);
-		padding: 40px;
-		border-bottom:1px solid rgba(255,255,255,0.2);
+	position:relative;
+	background: rgb(135, 154, 216);
+	padding: 40px;
+	border-bottom:1px solid rgba(255,255,255,0.2);
 		
 }
 
 .tarjeta_principal, .tarjeta_contacto{
-		position:relative;
-		display:flex;
-		flex-direction:column;
-		align-items:center;
-		padding-bottom: 20px;
+	position:relative;
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+	padding-bottom: 20px;
 
 }
 
@@ -76,11 +76,11 @@ body {
 
 .fotografia_circular:hover{
 	/*Aplica sombra sobre la fotografia cuando el mouse/cursor esta encima*/
-        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-    /*Le doy medio segundo de transicion*/
-		transition: 500ms;
+    	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    	/*Le doy medio segundo de transicion*/
+	transition: 500ms;
 	/*Transformo la foto, rotandola una vuelta*/
-		transform: rotate(1turn);
+	transform: rotate(1turn);
 }
 
 .icono{
