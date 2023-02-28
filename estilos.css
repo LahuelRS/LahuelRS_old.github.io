@@ -11,8 +11,8 @@
 
 body {
 	/* Genero un fondo con gradiente -fuente: https://cssgradient.io/  -*/
-        background: rgb(10,10,111);
-        background: linear-gradient(90deg, rgba(10,10,111,1) 0%, rgba(100,149,180,0.871568610354298) 87%, rgba(2,0,36,1) 100%); 
+    background: rgb(10,10,111);
+    background: linear-gradient(90deg, rgb(31, 31, 184) 0%, rgba(2,0,36,1) 100%); 
 	background-repeat: repeat;
 	/* Utilizo flexbox */
 	display:flex;
@@ -88,7 +88,7 @@ body {
 		color: beige;
 }
 
-.tarjeta_principal h2{
+.tarjeta_principal h2, .titulo{
 	color:#fff;
 	font-size:1.5em;
 	margin-top:20px;
@@ -102,6 +102,10 @@ body {
 	font-size:0.8em;
 	font-weight:300;
 	
+}
+
+li{
+	white-space: nowrap;
 }
 
 
