@@ -1,19 +1,27 @@
 <!DOCTYPE html>
 <html lang="es-AR">
 <head>
-    <meta charset="UTF-8">    
+	<meta charset="UTF-8">    
 	<meta language="es-AR">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV de Lahuel</title>
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="robots" content="nofollow,noindex">
+	
+	<meta property="og:title" content="Curriculum Vitae 2023" />
+	<meta property="og:url" content="https://lahuelrs.github.io/" />
+	<meta property="og:description" content="Curriculum Vitae de LahuelRS para Argentina Programa - HTML, CSS y JS - 2023.">
+	<meta property="og:locale" content="es_AR" />
+	
+    	<title>CV de Lahuel</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" type="text/css" href="estilos.css">
+    	<link rel="stylesheet" type="text/css" href="estilos.css">
+	<script rel="javascript" src="libreria.js" defer></script>
 </head>
 <body>
 	<div class=contenedor>
 		<div class=lado_izquierdo>
 			<div class="tarjeta_principal">
-				<img class="fotografia_circular" id="fotografia_perfil" src="https://randomuser.me/api/portraits/men/51.jpg" alt="Fotografia de perfil de John">
-				<h2>Lahuel, R.S.<br><span>Desarrollador</span></h2>
+				<img class="fotografia_circular" id="picture" src="https://randomuser.me/api/portraits/men/51.jpg" alt="Fotografia de perfil de John">
+				<h2 id=fullname>Lahuel, R.S.<br><span>Desarrollador</span></h2>
 			</div>
 			
 			<div class="tarjeta_contacto">
@@ -21,10 +29,10 @@
 				<ul>
 					<li>
 						<span class="icono"><i class="fa fa-phone" aria-hidden="true"></i></span>
-						<span class="texto"> (+54) 123-0303-456</span> </li>
+						<span class="texto" id="phone"> (+54) 123-0303-456</span> </li>
 					<li>
 						<span class="icono"><i class="fa fa-envelope-o" aria-hidden="true"></i></span>
-						<span class="texto"> LRS@dominio.com</span>
+						<span class="texto" id="email"> LRS@dominio.com</span>
 					</li>
 				</ul>
 			</div>
